@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>모바일 판매 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">PhoneShop</h1>
+        <div class="controls">
+          <input id="search" type="search" placeholder="제품 검색 (예: Galaxy, iPhone)"/>
+          <button id="cartBtn" class="cart-btn">장바구니 (<span id="cartCount">0</span>)</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="filters">
+        <button class="filter" data-filter="all">전체</button>
+        <button class="filter" data-filter="samsung">Samsung</button>
+        <button class="filter" data-filter="apple">Apple</button>
+        <button class="filter" data-filter="google">Google</button>
+      </section>
+
+      <section id="products" class="product-grid">
+        <article class="card" data-name="Galaxy S26" data-brand="samsung" data-price="1199000">
+          <img src="https://via.placeholder.com/300x200.png?text=Galaxy+S26" alt="Galaxy S26">
+          <h3>Galaxy S26</h3>
+          <p class="price">1,199,000원</p>
+          <button class="add-btn">장바구니에 추가</button>
+        </article>
+
+        <article class="card" data-name="iPhone 15 Pro" data-brand="apple" data-price="1399000">
+          <img src="https://via.placeholder.com/300x200.png?text=iPhone+15+Pro" alt="iPhone 15 Pro">
+          <h3>iPhone 15 Pro</h3>
+          <p class="price">1,399,000원</p>
+          <button class="add-btn">장바구니에 추가</button>
+        </article>
+
+        <article class="card" data-name="Pixel 8" data-brand="google" data-price="899000">
+          <img src="https://via.placeholder.com/300x200.png?text=Pixel+8" alt="Pixel 8">
+          <h3>Pixel 8</h3>
+          <p class="price">899,000원</p>
+          <button class="add-btn">장바구니에 추가</button>
+        </article>
+
+        <article class="card" data-name="Galaxy A55" data-brand="samsung" data-price="499000">
+          <img src="https://via.placeholder.com/300x200.png?text=Galaxy+A55" alt="Galaxy A55">
+          <h3>Galaxy A55</h3>
+          <p class="price">499,000원</p>
+          <button class="add-btn">장바구니에 추가</button>
+        </article>
+      </section>
+    </main>
+
+    <div id="cartModal" class="cart-modal hidden">
+      <div class="cart-content">
+        <button id="closeCart" class="close">✕</button>
+        <h2>장바구니</h2>
+        <ul id="cartItems" class="cart-items"></ul>
+        <div class="cart-footer">
+          <strong>총 합계: <span id="cartTotal">0원</span></strong>
+          <button id="checkout" class="checkout">결제하기</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
